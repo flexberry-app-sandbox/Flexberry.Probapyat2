@@ -12,6 +12,7 @@ namespace IIS.Probapyat
 {
     using System;
     using System.Xml;
+    using ICSSoft.STORMNET;
     
     
     // *** Start programmer edit section *** (Using statements)
@@ -28,14 +29,16 @@ namespace IIS.Probapyat
     public enum Статус
     {
         
-        // *** Start programmer edit section *** (Статус.Готов CustomAttributes)
-
-        // *** End programmer edit section *** (Статус.Готов CustomAttributes)
-        Готов,
-        
         // *** Start programmer edit section *** (Статус.Принят CustomAttributes)
 
         // *** End programmer edit section *** (Статус.Принят CustomAttributes)
+        [Caption("Принят")]
         Принят,
+        
+        // *** Start programmer edit section *** (Статус.Готов CustomAttributes)
+
+        // *** End programmer edit section *** (Статус.Готов CustomAttributes)
+        [Caption("Готов")]
+        Готов,
     }
 }

@@ -1,6 +1,6 @@
 import { createEnum } from 'ember-flexberry-data/utils/enum-functions';
 
 export default createEnum({
-  Готов: '',
-  Принят: ''
+  Принят: 'Принят',
+  Готов: 'Готов'
 });
