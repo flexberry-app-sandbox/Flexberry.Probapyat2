@@ -12,6 +12,7 @@ namespace IIS.Probapyat
 {
     using System;
     using System.Xml;
+    using ICSSoft.STORMNET;
     
     
     // *** Start programmer edit section *** (Using statements)
@@ -28,14 +29,16 @@ namespace IIS.Probapyat
     public enum Лица
     {
         
-        // *** Start programmer edit section *** (Лица.Физическое CustomAttributes)
-
-        // *** End programmer edit section *** (Лица.Физическое CustomAttributes)
-        Физическое,
-        
         // *** Start programmer edit section *** (Лица.Юридическое CustomAttributes)
 
         // *** End programmer edit section *** (Лица.Юридическое CustomAttributes)
+        [Caption("Юридическое")]
         Юридическое,
+        
+        // *** Start programmer edit section *** (Лица.Физическое CustomAttributes)
+
+        // *** End programmer edit section *** (Лица.Физическое CustomAttributes)
+        [Caption("Физическое")]
+        Физическое,
     }
 }

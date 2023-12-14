@@ -26,13 +26,13 @@ export default Controller.extend({
               link: 'i-i-s-probapyat-контрагент-l',
               caption: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-контрагент-l.caption'),
               title: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-контрагент-l.title'),
-              icon: 'address card',
+              icon: 'calendar',
               children: null
             }, {
               link: 'i-i-s-probapyat-мастер-l',
               caption: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-мастер-l.caption'),
               title: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-мастер-l.title'),
-              icon: 'chart bar',
+              icon: 'folder open',
               children: null
             }, {
               link: 'i-i-s-probapyat-номенклатура-l',
@@ -48,13 +48,13 @@ export default Controller.extend({
               link: 'i-i-s-probapyat-журнал-заказов-l',
               caption: i18n.t('forms.application.sitemap.заказы.документация.i-i-s-probapyat-журнал-заказов-l.caption'),
               title: i18n.t('forms.application.sitemap.заказы.документация.i-i-s-probapyat-журнал-заказов-l.title'),
-              icon: 'address card',
+              icon: 'suitcase',
               children: null
             }, {
               link: 'i-i-s-probapyat-заказ-l',
               caption: i18n.t('forms.application.sitemap.заказы.документация.i-i-s-probapyat-заказ-l.caption'),
               title: i18n.t('forms.application.sitemap.заказы.документация.i-i-s-probapyat-заказ-l.title'),
-              icon: 'chart line',
+              icon: 'folder open',
               children: null
             }]
           }]
