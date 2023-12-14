@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probapyat-мастер-e",
+  "editForm": "i-i-s-probapyat-мастер-e",
+  "external": false,
+  "caption": "Мастер",
+  "name": "IISProbapyatМастерL",
+  "className": "МастерL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probapyat-мастер",
+      "modelProjection": "МастерL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probapyat-журнал-заказов-e",
+  "editForm": "i-i-s-probapyat-журнал-заказов-e",
+  "external": false,
+  "caption": "Журнал заказов",
+  "name": "IISProbapyatЖурналЗаказовL",
+  "className": "ЖурналЗаказовL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probapyat-журнал-заказов",
+      "modelProjection": "ЖурналЗаказовL"
+    }
+  ]
+}

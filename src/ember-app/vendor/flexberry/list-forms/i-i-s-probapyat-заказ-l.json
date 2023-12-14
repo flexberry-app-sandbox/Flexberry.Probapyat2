@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probapyat-заказ-e",
+  "editForm": "i-i-s-probapyat-заказ-e",
+  "external": false,
+  "caption": "Оформление заказов",
+  "name": "IISProbapyatЗаказL",
+  "className": "ЗаказL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probapyat-заказ",
+      "modelProjection": "ЗаказL"
+    }
+  ]
+}

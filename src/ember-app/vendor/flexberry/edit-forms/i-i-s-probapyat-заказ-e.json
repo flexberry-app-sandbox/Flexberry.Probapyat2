@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Контрагент",
+      "projection": "КонтрагентL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Мастер",
+      "projection": "МастерL",
+      "detailModelName": null
+    },
+    {
+      "master": "номенклатура",
+      "displayAttributeName": "товар",
+      "required": true,
+      "relationName": "РасчетЗаказа.Номенклатура",
+      "projection": "НоменклатураL",
+      "detailModelName": "i-i-s-probapyat-расчет-заказа"
+    }
+  ],
+  "external": false,
+  "caption": "Оформление заказов",
+  "name": "IISProbapyatЗаказE",
+  "className": "ЗаказE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probapyat-заказ",
+      "modelProjection": "ЗаказE"
+    }
+  ]
+}

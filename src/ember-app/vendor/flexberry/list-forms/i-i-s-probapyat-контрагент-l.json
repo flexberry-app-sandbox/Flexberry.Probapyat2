@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probapyat-контрагент-e",
+  "editForm": "i-i-s-probapyat-контрагент-e",
+  "external": false,
+  "caption": "Контрагент",
+  "name": "IISProbapyatКонтрагентL",
+  "className": "КонтрагентL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probapyat-контрагент",
+      "modelProjection": "КонтрагентL"
+    }
+  ]
+}

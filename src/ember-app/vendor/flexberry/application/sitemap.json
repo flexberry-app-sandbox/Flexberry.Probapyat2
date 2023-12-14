@@ -1,0 +1,66 @@
+﻿{
+  "applicationCaption": "Probapyat",
+  "applicationTitle": "Probapyat",
+  "items": [
+    {
+      "link": null,
+      "menuName": "заказы",
+      "caption": "Заказы",
+      "title": "Заказы",
+      "children": [
+        {
+          "link": null,
+          "menuName": "справочники",
+          "caption": "Справочники",
+          "title": "Справочники",
+          "children": [
+            {
+              "link": "i-i-s-probapyat-контрагент-l",
+              "menuName": null,
+              "caption": "Контрагенты",
+              "title": "Контрагент",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probapyat-мастер-l",
+              "menuName": null,
+              "caption": "Мастера",
+              "title": "Мастер",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probapyat-номенклатура-l",
+              "menuName": null,
+              "caption": "Номенклатура",
+              "title": "Номенклатура",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "документация",
+          "caption": "Документация",
+          "title": "Документация",
+          "children": [
+            {
+              "link": "i-i-s-probapyat-журнал-заказов-l",
+              "menuName": null,
+              "caption": "Журнал заказов",
+              "title": "Журнал заказов",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probapyat-заказ-l",
+              "menuName": null,
+              "caption": "Оформление заказов",
+              "title": "Заказ",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

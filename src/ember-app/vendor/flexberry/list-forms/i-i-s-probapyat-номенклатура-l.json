@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probapyat-номенклатура-e",
+  "editForm": "i-i-s-probapyat-номенклатура-e",
+  "external": false,
+  "caption": "Номенклатура",
+  "name": "IISProbapyatНоменклатураL",
+  "className": "НоменклатураL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probapyat-номенклатура",
+      "modelProjection": "НоменклатураL"
+    }
+  ]
+}

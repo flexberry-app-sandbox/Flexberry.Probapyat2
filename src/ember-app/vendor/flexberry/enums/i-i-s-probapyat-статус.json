@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Probapyat",
+  "className": "Статус",
+  "enumObjects": {
+    "Готов": "",
+    "Принят": ""
+  }
+}

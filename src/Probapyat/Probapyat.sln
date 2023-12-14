@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probapyat.Objects", "Objects/Probapyat.Objects.csproj", "933ecad4-71ad-47c9-a62a-8d2f54ea0df2"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probapyat.Tests", "Tests/Probapyat.Tests.csproj", "8800e1a4-887b-4d39-8e34-7dd4c0f25dd4"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probapyat.ODataBackend", "ODataBackend/Probapyat.ODataBackend.csproj", "e98a6525-eb20-44ec-a49e-7d3ec0ec9f9a"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probapyat.IntegrationTests", "IntegrationTests/Probapyat.IntegrationTests.csproj", "82713d24-a0d6-4722-9172-57b8cc371301"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		933ecad4-71ad-47c9-a62a-8d2f54ea0df2.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		933ecad4-71ad-47c9-a62a-8d2f54ea0df2.Debug|Any CPU.Build.0 = Debug|Any CPU
+		933ecad4-71ad-47c9-a62a-8d2f54ea0df2.Release|Any CPU.ActiveCfg = Release|Any CPU
+		933ecad4-71ad-47c9-a62a-8d2f54ea0df2.Release|Any CPU.Build.0 = Release|Any CPU
+		8800e1a4-887b-4d39-8e34-7dd4c0f25dd4.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		8800e1a4-887b-4d39-8e34-7dd4c0f25dd4.Debug|Any CPU.Build.0 = Debug|Any CPU
+		8800e1a4-887b-4d39-8e34-7dd4c0f25dd4.Release|Any CPU.ActiveCfg = Release|Any CPU
+		8800e1a4-887b-4d39-8e34-7dd4c0f25dd4.Release|Any CPU.Build.0 = Release|Any CPU
+		e98a6525-eb20-44ec-a49e-7d3ec0ec9f9a.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		e98a6525-eb20-44ec-a49e-7d3ec0ec9f9a.Debug|Any CPU.Build.0 = Debug|Any CPU
+		e98a6525-eb20-44ec-a49e-7d3ec0ec9f9a.Release|Any CPU.ActiveCfg = Release|Any CPU
+		e98a6525-eb20-44ec-a49e-7d3ec0ec9f9a.Release|Any CPU.Build.0 = Release|Any CPU
+		82713d24-a0d6-4722-9172-57b8cc371301.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		82713d24-a0d6-4722-9172-57b8cc371301.Debug|Any CPU.Build.0 = Debug|Any CPU
+		82713d24-a0d6-4722-9172-57b8cc371301.Release|Any CPU.ActiveCfg = Release|Any CPU
+		82713d24-a0d6-4722-9172-57b8cc371301.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
