@@ -32,19 +32,19 @@ export default Controller.extend({
               link: 'i-i-s-probapyat-контрагент-l',
               caption: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-контрагент-l.caption'),
               title: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-контрагент-l.title'),
-              icon: 'file',
+              icon: 'chart line',
               children: null
             }, {
               link: 'i-i-s-probapyat-мастер-l',
               caption: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-мастер-l.caption'),
               title: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-мастер-l.title'),
-              icon: 'archive',
+              icon: 'paperclip',
               children: null
             }, {
               link: 'i-i-s-probapyat-номенклатура-l',
               caption: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-номенклатура-l.caption'),
               title: i18n.t('forms.application.sitemap.заказы.справочники.i-i-s-probapyat-номенклатура-l.title'),
-              icon: 'folder',
+              icon: 'list',
               children: null
             }]
           }, {
