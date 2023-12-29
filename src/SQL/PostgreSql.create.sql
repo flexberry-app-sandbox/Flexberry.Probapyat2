@@ -1,0 +1,187 @@
+﻿
+
+
+
+
+CREATE TABLE Номенклатура (
+ primaryKey UUID NOT NULL,
+ НомерТовара INT NULL,
+ Товар VARCHAR(255) NULL,
+ Цена DOUBLE PRECISION NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Заказ (
+ primaryKey UUID NOT NULL,
+ Дата TIMESTAMP(3) NULL,
+ Итог DOUBLE PRECISION NULL,
+ НомерЗаказа INT NULL,
+ Контрагент UUID NOT NULL,
+ Мастер UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE РасчетЗаказа (
+ primaryKey UUID NOT NULL,
+ Количество INT NULL,
+ Сумма DOUBLE PRECISION NULL,
+ Номенклатура UUID NOT NULL,
+ Заказ UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ЖурналЗаказов (
+ primaryKey UUID NOT NULL,
+ Дата TIMESTAMP(3) NULL,
+ СтатусЗаказа VARCHAR(6) NULL,
+ Заказ UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Контрагент (
+ primaryKey UUID NOT NULL,
+ Адрес VARCHAR(255) NULL,
+ ИНН INT NULL,
+ КодКонтрагента INT NULL,
+ Контрагент VARCHAR(255) NULL,
+ Лицо VARCHAR(11) NULL,
+ Почта VARCHAR(255) NULL,
+ Телефон VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Мастер (
+ primaryKey UUID NOT NULL,
+ Адрес VARCHAR(255) NULL,
+ КодМастера INT NULL,
+ Почта VARCHAR(255) NULL,
+ Телефон VARCHAR(255) NULL,
+ ФИО VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMNETLOCKDATA (
+ LockKey VARCHAR(300) NOT NULL,
+ UserName VARCHAR(300) NOT NULL,
+ LockDate TIMESTAMP(3) NULL,
+ PRIMARY KEY (LockKey));
+
+
+CREATE TABLE STORMSETTINGS (
+ primaryKey UUID NOT NULL,
+ Module VARCHAR(1000) NULL,
+ Name VARCHAR(255) NULL,
+ Value TEXT NULL,
+ "User" VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMAdvLimit (
+ primaryKey UUID NOT NULL,
+ "User" VARCHAR(255) NULL,
+ Published BOOLEAN NULL,
+ Module VARCHAR(255) NULL,
+ Name VARCHAR(255) NULL,
+ Value TEXT NULL,
+ HotKeyData INT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERSETTING (
+ primaryKey UUID NOT NULL,
+ Name VARCHAR(255) NOT NULL,
+ DataObjectView VARCHAR(255) NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMWEBSEARCH (
+ primaryKey UUID NOT NULL,
+ Name VARCHAR(255) NOT NULL,
+ "Order" INT NOT NULL,
+ PresentView VARCHAR(255) NOT NULL,
+ DetailedView VARCHAR(255) NOT NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERDETAIL (
+ primaryKey UUID NOT NULL,
+ Caption VARCHAR(255) NOT NULL,
+ DataObjectView VARCHAR(255) NOT NULL,
+ ConnectMasterProp VARCHAR(255) NOT NULL,
+ OwnerConnectProp VARCHAR(255) NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERLOOKUP (
+ primaryKey UUID NOT NULL,
+ DataObjectType VARCHAR(255) NOT NULL,
+ Container VARCHAR(255) NULL,
+ ContainerTag VARCHAR(255) NULL,
+ FieldsToView VARCHAR(255) NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE UserSetting (
+ primaryKey UUID NOT NULL,
+ AppName VARCHAR(256) NULL,
+ UserName VARCHAR(512) NULL,
+ UserGuid UUID NULL,
+ ModuleName VARCHAR(1024) NULL,
+ ModuleGuid UUID NULL,
+ SettName VARCHAR(256) NULL,
+ SettGuid UUID NULL,
+ SettLastAccessTime TIMESTAMP(3) NULL,
+ StrVal VARCHAR(256) NULL,
+ TxtVal TEXT NULL,
+ IntVal INT NULL,
+ BoolVal BOOLEAN NULL,
+ GuidVal UUID NULL,
+ DecimalVal DECIMAL(20,10) NULL,
+ DateTimeVal TIMESTAMP(3) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ApplicationLog (
+ primaryKey UUID NOT NULL,
+ Category VARCHAR(64) NULL,
+ EventId INT NULL,
+ Priority INT NULL,
+ Severity VARCHAR(32) NULL,
+ Title VARCHAR(256) NULL,
+ Timestamp TIMESTAMP(3) NULL,
+ MachineName VARCHAR(32) NULL,
+ AppDomainName VARCHAR(512) NULL,
+ ProcessId VARCHAR(256) NULL,
+ ProcessName VARCHAR(512) NULL,
+ ThreadName VARCHAR(512) NULL,
+ Win32ThreadId VARCHAR(128) NULL,
+ Message VARCHAR(2500) NULL,
+ FormattedMessage TEXT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+
+ ALTER TABLE Заказ ADD CONSTRAINT FK8d4059328be002fc52a27d8c17993fab8db1f3fc FOREIGN KEY (Контрагент) REFERENCES Контрагент; 
+CREATE INDEX Index8d4059328be002fc52a27d8c17993fab8db1f3fc on Заказ (Контрагент); 
+
+ ALTER TABLE Заказ ADD CONSTRAINT FK0f1163dafa1b9cdec363a66425cbdfa6722d41ba FOREIGN KEY (Мастер) REFERENCES Мастер; 
+CREATE INDEX Index0f1163dafa1b9cdec363a66425cbdfa6722d41ba on Заказ (Мастер); 
+
+ ALTER TABLE РасчетЗаказа ADD CONSTRAINT FK99515fb3de5764f2c9330d2d542598e75d12581e FOREIGN KEY (Номенклатура) REFERENCES Номенклатура; 
+CREATE INDEX Index99515fb3de5764f2c9330d2d542598e75d12581e on РасчетЗаказа (Номенклатура); 
+
+ ALTER TABLE РасчетЗаказа ADD CONSTRAINT FK9d6c1406e07c0352587bdf852ff8f1aea105dcf6 FOREIGN KEY (Заказ) REFERENCES Заказ; 
+CREATE INDEX Index9d6c1406e07c0352587bdf852ff8f1aea105dcf6 on РасчетЗаказа (Заказ); 
+
+ ALTER TABLE ЖурналЗаказов ADD CONSTRAINT FKa7d3410cf9825adb75ff6873b5447138606b1505 FOREIGN KEY (Заказ) REFERENCES Заказ; 
+CREATE INDEX Indexa7d3410cf9825adb75ff6873b5447138606b1505 on ЖурналЗаказов (Заказ); 
+
+ ALTER TABLE STORMWEBSEARCH ADD CONSTRAINT FKc4378e39870eb056aec84088683297a01d2a6200 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
+ ALTER TABLE STORMFILTERDETAIL ADD CONSTRAINT FK921d16269835017e2a0d0e29ad6fb175454a70d0 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
+ ALTER TABLE STORMFILTERLOOKUP ADD CONSTRAINT FKce38ef0db3f01a53acaa49fed8853fb941ad47ba FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
